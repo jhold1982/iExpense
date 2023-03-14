@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AddView: View {
+	// we aren't creating it, we are saying it exists
     @ObservedObject var expenses: Expenses
     @Environment(\.dismiss) var dismiss
     @State private var name = ""
@@ -29,7 +30,11 @@ struct AddView: View {
             .navigationTitle("Add New Expense")
             .toolbar {
                 Button("Save") {
-                    let item = ExpenseItem(name: name, type: type, amount: amount)
+                    let item = ExpenseItem(
+						name: name,
+						type: type,
+						amount: amount
+					)
                     expenses.items.append(item)
                     dismiss()
                 }
@@ -41,6 +46,7 @@ struct AddView: View {
 
 struct AddView_Previews: PreviewProvider {
     static var previews: some View {
+		// expenses is a new Expenses Object "Dummy Value"
         AddView(expenses: Expenses())
     }
 }

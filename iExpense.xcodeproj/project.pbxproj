@@ -11,9 +11,9 @@
 		64DB77CB28C66309004ABC3D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DB77CA28C66309004ABC3D /* ContentView.swift */; };
 		64DB77CD28C6630A004ABC3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64DB77CC28C6630A004ABC3D /* Assets.xcassets */; };
 		64DB77D028C6630A004ABC3D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64DB77CF28C6630A004ABC3D /* Preview Assets.xcassets */; };
-		64DB77D728C66389004ABC3D /* FormatStyle-Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DB77D628C66389004ABC3D /* FormatStyle-Currency.swift */; };
+		64DB77D728C66389004ABC3D /* FormatStyle-LocalCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DB77D628C66389004ABC3D /* FormatStyle-LocalCurrency.swift */; };
 		64DB77D928C663A7004ABC3D /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DB77D828C663A7004ABC3D /* AddView.swift */; };
-		64DB77DB28C663FB004ABC3D /* ExenseItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DB77DA28C663FB004ABC3D /* ExenseItems.swift */; };
+		64DB77DB28C663FB004ABC3D /* ExenseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DB77DA28C663FB004ABC3D /* ExenseItem.swift */; };
 		64DB77DD28C66424004ABC3D /* Expenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DB77DC28C66424004ABC3D /* Expenses.swift */; };
 		64DB77DF28C664A7004ABC3D /* View-ExpenseStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DB77DE28C664A7004ABC3D /* View-ExpenseStyling.swift */; };
 		64DB77E128C66A3D004ABC3D /* ExpenseSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DB77E028C66A3D004ABC3D /* ExpenseSectionView.swift */; };
@@ -32,9 +32,9 @@
 		64DB77CA28C66309004ABC3D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		64DB77CC28C6630A004ABC3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		64DB77CF28C6630A004ABC3D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		64DB77D628C66389004ABC3D /* FormatStyle-Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FormatStyle-Currency.swift"; sourceTree = "<group>"; };
+		64DB77D628C66389004ABC3D /* FormatStyle-LocalCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FormatStyle-LocalCurrency.swift"; sourceTree = "<group>"; };
 		64DB77D828C663A7004ABC3D /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
-		64DB77DA28C663FB004ABC3D /* ExenseItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExenseItems.swift; sourceTree = "<group>"; };
+		64DB77DA28C663FB004ABC3D /* ExenseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExenseItem.swift; sourceTree = "<group>"; };
 		64DB77DC28C66424004ABC3D /* Expenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expenses.swift; sourceTree = "<group>"; };
 		64DB77DE28C664A7004ABC3D /* View-ExpenseStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View-ExpenseStyling.swift"; sourceTree = "<group>"; };
 		64DB77E028C66A3D004ABC3D /* ExpenseSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseSectionView.swift; sourceTree = "<group>"; };
@@ -115,7 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				64DB77DE28C664A7004ABC3D /* View-ExpenseStyling.swift */,
-				64DB77D628C66389004ABC3D /* FormatStyle-Currency.swift */,
+				64DB77D628C66389004ABC3D /* FormatStyle-LocalCurrency.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -124,7 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				64DB77DC28C66424004ABC3D /* Expenses.swift */,
-				64DB77DA28C663FB004ABC3D /* ExenseItems.swift */,
+				64DB77DA28C663FB004ABC3D /* ExenseItem.swift */,
 			);
 			path = "Data Models";
 			sourceTree = "<group>";
@@ -210,14 +210,14 @@
 			files = (
 				64DB77DD28C66424004ABC3D /* Expenses.swift in Sources */,
 				64E9805929C0C6E4005A2FC3 /* Example4.swift in Sources */,
-				64DB77DB28C663FB004ABC3D /* ExenseItems.swift in Sources */,
+				64DB77DB28C663FB004ABC3D /* ExenseItem.swift in Sources */,
 				64E9805729C0C2F3005A2FC3 /* Example3.swift in Sources */,
 				64DB77D928C663A7004ABC3D /* AddView.swift in Sources */,
 				64E9805529C0B288005A2FC3 /* Example2.swift in Sources */,
 				64E9805B29C0CC1C005A2FC3 /* Example5.swift in Sources */,
 				64DB77DF28C664A7004ABC3D /* View-ExpenseStyling.swift in Sources */,
 				64DB77E128C66A3D004ABC3D /* ExpenseSectionView.swift in Sources */,
-				64DB77D728C66389004ABC3D /* FormatStyle-Currency.swift in Sources */,
+				64DB77D728C66389004ABC3D /* FormatStyle-LocalCurrency.swift in Sources */,
 				64DB77CB28C66309004ABC3D /* ContentView.swift in Sources */,
 				64E9805D29C0CDF6005A2FC3 /* Example6.swift in Sources */,
 				64E9804E29C001EA005A2FC3 /* Example1.swift in Sources */,

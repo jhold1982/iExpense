@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+	// asks SwiftUI to watch the object for any change announcements
+	// if any of those properties change, the view will refresh the body
     @StateObject var expenses = Expenses()
     @State private var showingAddExpense = false
     var body: some View {

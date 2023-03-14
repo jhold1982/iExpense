@@ -9,6 +9,7 @@ import Foundation
 
 class Expenses: ObservableObject {
     @Published var items = [ExpenseItem]() {
+		// property observer
         didSet {
             if let encoded = try? JSONEncoder().encode(items) {
                 UserDefaults.standard.set(encoded, forKey: "Items")
