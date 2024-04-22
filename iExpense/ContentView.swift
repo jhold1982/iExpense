@@ -11,7 +11,6 @@ struct ContentView: View {
 	
 	// MARK: - PROPERTIES
     @StateObject var expenses = Expenses()
-    @State private var showingAddExpense = false
 	
 	// MARK: - VIEW BODY
     var body: some View {
@@ -32,15 +31,12 @@ struct ContentView: View {
             }
             .navigationTitle("iExpense")
             .toolbar {
-                Button {
-                    showingAddExpense = true
+                NavigationLink {
+                    AddView(expenses: expenses)
                 } label: {
-                    Image(systemName: "plus")
+                    Label("Add Expense", systemImage: "plus")
                 }
 				.padding()
-            }
-            .sheet(isPresented: $showingAddExpense) {
-                AddView(expenses: expenses)
             }
         }
     }
