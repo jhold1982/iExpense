@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct ExpenseSection: View {
+	
+	// MARK: - PROPERTIES
     let title: String
     let expenses: [ExpenseItem]
     let deleteItems: (IndexSet) -> Void
+	
+	// MARK: - VIEW BODY
     var body: some View {
         Section(title) {
             ForEach(expenses) { item in

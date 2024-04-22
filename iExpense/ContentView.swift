@@ -8,18 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
-	// asks SwiftUI to watch the object for any change announcements
-	// if any of those properties change, the view will refresh the body
+	
+	// MARK: - PROPERTIES
     @StateObject var expenses = Expenses()
     @State private var showingAddExpense = false
+	
+	// MARK: - VIEW BODY
     var body: some View {
         NavigationView {
             List {
+				
                 ExpenseSection(
 					title: "Business",
 					expenses: expenses.businessItems,
 					deleteItems: removeBusinessItems
 				)
+				
                 ExpenseSection(
 					title: "Personal",
 					expenses: expenses.personalItems,
@@ -40,6 +44,12 @@ struct ContentView: View {
             }
         }
     }
+	
+	// MARK: - FUNCTIONS
+	/// Method to delete items
+	/// - Parameters:
+	///   - offsets: finds item in array, removes from array, and sets correct positon of array items
+	///   - inputArray: calls to the array of ExpenseItems
     func removeItems(at offsets: IndexSet, in inputArray: [ExpenseItem]) {
         var objectsToDelete = IndexSet()
         for offset in offsets {
@@ -50,9 +60,15 @@ struct ContentView: View {
         }
         expenses.items.remove(atOffsets: objectsToDelete)
     }
+	
+	/// Method to remove items from Personal
+	/// - Parameter offsets: finds item in array, removes from array, and sets correct positon of array items
     func removePersonalItems(at offsets: IndexSet) {
         removeItems(at: offsets, in: expenses.personalItems)
     }
+	
+	/// Method to remove items from Personal
+	/// - Parameter offsets: finds item in array, removes from array, and sets correct positon of array items
     func removeBusinessItems(at offsets: IndexSet) {
         removeItems(at: offsets, in: expenses.businessItems)
     }
